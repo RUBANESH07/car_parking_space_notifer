@@ -1,0 +1,286 @@
+
+#header {
+  display: flex;
+  align-items: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: rgb(238, 213, 243);
+  
+  
+}
+.container{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 100%;
+
+}
+.logo{
+  width:70px;
+  height:70px;
+  margin-left: 10%;
+ background-color: black;
+  display: flex;
+  align-items: center;
+  
+}
+.logo img{
+  width:60px;
+  height:60px;
+  border-radius: 11px;
+  margin-left: 5px;
+  
+}
+.conta{
+  width:600px;
+  height:75%;
+  margin-left: 20%;
+
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content:space-around;
+  font-size: 15px;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+ }
+.nav-item {
+  display: flex;
+}
+.nav-item a {
+  font-size: 23px;
+  text-decoration: none;
+  color: #000101; /* Change to your desired color */
+}
+
+.nav-ul {
+  display: flex;
+}
+
+.nav-item a:hover {
+  color: #0520ef; /* Change to your desired hover color */
+}
+
+.heading{
+  
+  height: 380px;
+  width: 1368px;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 6.68%;
+  align-items: center;
+  /*background-image:linear-gradient(white,rgb(203, 239, 240));*/
+  background-image:linear-gradient(rgb(97, 102, 242),white);
+}
+.headi{
+  width: 410px;
+  height: 310px;
+  
+  
+  
+}
+.headp{
+ 
+  width: 700px;
+  height: 250px;
+  text-align: center;
+}
+.headp h1{
+
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.headp h2{
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.centered-img{
+  display:block;
+  margin: 6.1%;
+  border-radius:8%;
+
+}
+
+.heading img{
+  width: 380px;
+  height: 280px;
+  
+}
+h1{
+  text-align: center;
+  font-family: cursive;
+}
+.hole{
+  max-height: fit-content;
+  width:5%;
+  
+}
+.con{
+  height: 450px;
+  width: 1320px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.coni{
+  width: 450px;
+  height: 280px;
+  align-items: center;
+
+}
+.con img{
+  width: 370px;
+  height: 265px;
+  margin-left: 20px;
+ 
+
+}
+.comp h1{
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.conp h2{
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.conp h3{
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+.conp{
+  
+  text-align: center;
+  margin-left: 5%;
+
+
+}
+.rimg{
+  height:400px;
+  width: 1320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+.imap{
+  height: 260px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  
+}
+.imap iframe{
+  margin-top: 9%;
+  height: 200px;
+  width: 300px;
+}
+.rp{
+  height: 330px;
+  width: 650px;
+}
+.rp h1{
+  font-size: 35px;
+ 
+}
+.rp p{
+  font-size: 25px;
+  font-family:cursive;
+} 
+
+
+.para{
+  width: 1320px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  }
+  .para1{
+  
+  width:1300px;
+  height:230px ;
+  margin-left: 2%;
+  }
+  .para1 p{
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+  }
+  
+.abou{
+  
+  height: 300px;
+  width: 1320px;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 28%;
+  align-items: center;
+  
+ }
+.abou-ahead{
+  font-size:10px;
+  
+}
+.abouti{
+width: 430px;
+height: 250px;
+display: flex;
+align-items: center;
+  background-color: rgb(85, 220, 233);
+
+
+}
+
+.aboutp{
+text-align: center;
+display: flex;
+margin-left: 5%;
+width: 600px;
+height: 90px;
+
+
+
+}
+.aboutp h1{
+margin-top: 0%;
+margin-right: 25px;
+font-size: 65Px;
+
+}
+.aboutp p{
+font-size: 30px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.go-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #75e595;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+#footer{
+
+
+}
+
+
+.linkdet{
+margin-top: 1.5%;
+background-color: #070707;
+width: 100%;
+height: 100px;
+
+}

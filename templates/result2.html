@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <b><title>Object Detection Results</title></b>
+</head>
+<body style="background-color: rgb(239, 174, 211);">
+    <h1>Free Lots Available </h1>
+    <h2>place 2</h2>
+    <img src="data:image/png;base64,{{ image }}">
+    <b><p>Number of cars detected: {{ car_count }}</p></b>
+    <b><p>Number of free objects detected: {{ free_count }}</p></b>
+    <b><p>Total count: {{ total_count }}</p></b>
+</body>
+</html>

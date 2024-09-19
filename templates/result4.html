@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <b><title>Object Detection Results</title></b>
+</head>
+<body style="background-color: rgb(241, 171, 239);">
+    <h1>Free Lots Available</h1>
+    <h2>place 4</h2>
+   
+    <ul>
+        {% for result in frame_results %}
+            <li>
+                <b><p>Frame: {{ result.frame }}</p></b>
+                <p>Number of cars detected: {{ result.car_count }}</p>
+                <p>Number of free objects detected: {{ result.free_count }}</p>
+                <p>Total count: {{ result.total_count }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking Space Detection</title>
+    {% load static %}
+   <!--  <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+    <!-- import the CSS file -->
+    <style>
+        /* Inline CSS to set the background image */ 
+        body {
+            background-image: url("{% static 'images/img_2.jpg' %}");
+            background-size: cover;
+           
+        }
+        
+        .show-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .hide {
+            display: none;
+        }
+        #content {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Car Parking Space Notifier</h1>
+       
+    
+
+        <!-- Registration -->
+        <div class="container">
+            <div id="signup-section">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <label for="signup-email">Enter Email:</label>
+                    <input type="email" id="signup-email" placeholder="Enter email">
+                    <label for="signup-password">Enter Password:</label>
+                    <input type="password" id="signup-password" placeholder="Enter password">
+                    <button type="button" id="signup-button">Sign Up</button>
+                    <button type="button" id="goto-login-button">Go to Login</button>
+                </form>
+            </div>
+
+            <!-- Login  -->
+            <div id="login-section" style="display:none;">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="login-email">Enter Email:</label>
+                    <input type="email" id="login-email" placeholder="Enter email">
+                    <label for="login-password">Enter Password:</label>
+                    <input type="password" id="login-password" placeholder="Enter password">
+                    <button type="button" id="login-button">Login</button>
+                    <button type="button" id="goto-signup-button">Go to Sign Up</button>
+                </form>
+            </div>
+
+            
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCzdGT2Dl7S3xdtSlo9jBXCJv0RnutquSQ",
+            authDomain: "login-97da6.firebaseapp.com",
+            projectId: "login-97da6",
+            storageBucket: "login-97da6.appspot.com",
+            messagingSenderId: "800718206820",
+            appId: "1:800718206820:web:f5bd4a3313f18fba5d6c71"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        document.getElementById('signup-button').addEventListener('click', function() {
+            var email = document.getElementById('signup-email').value;
+            var password = document.getElementById('signup-password').value;
+
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then(function(userCredential) {
+                    var user = userCredential.user;
+                    alert("User signed up successfully!");
+                })
+                .catch(function(error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.error("Error during signup", errorCode, errorMessage);
+                    alert("Error: " + errorMessage);
+                });
+        });
+
+        document.getElementById('login-button').addEventListener('click', function() {
+            var email = document.getElementById('login-email').value;
+            var password = document.getElementById('login-password').value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then(function(userCredential) {
+                    var user = userCredential.user;
+                    alert("User logged in successfully!");
+                    window.location.href = 'http://127.0.0.1:8000/secondapp/map_p/';  // Redirect to the map_p page
+                })
+                .catch(function(error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.error("Error during login", errorCode, errorMessage);
+                    alert("Error: " + errorMessage);
+                });
+        });
+
+        document.getElementById('goto-login-button').addEventListener('click', function() {
+            document.getElementById('signup-section').style.display = 'none';
+            document.getElementById('login-section').style.display = 'block';
+        });
+
+        document.getElementById('goto-signup-button').addEventListener('click', function() {
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('signup-section').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
+<style>
+/* CSS for the main page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #858484;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1{
+    text-decoration: solid;
+    color: #f7eaf9;
+    margin-top: 2%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+    margin-top: 0%;
+    margin-bottom: 10px;
+    border: 1px solid #0c0c0c;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #298df7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>
